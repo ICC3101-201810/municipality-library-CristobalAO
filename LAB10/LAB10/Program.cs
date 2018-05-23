@@ -10,8 +10,6 @@ namespace LAB10
     {
         static void Main(string[] args)
         {
-            DateTime value = new DateTime(2017, 1, 18); //, "caca","caca", value,"mama","a","a
-
             List<Person> personas = new List<Person>();
             List<Car> autos = new List<Car>();
             List<Address> direcciones = new List<Address>();
@@ -167,7 +165,7 @@ namespace LAB10
                     try
                     {
                         i = 0;
-                        foreach (Address direccion in direcciones) { Console.WriteLine(i + " -  " + direccion.Street + "  " + direccion.Number); i = i + 1; }
+                        foreach (Address direccion in direcciones) { Console.WriteLine(i + "-  " + direccion.Street + "  " + direccion.Number); i = i + 1; }
                         Console.WriteLine("Ingrese el numero de la direccion a editar");
                         respuesta = Convert.ToInt32(Console.ReadLine());
                         Address dir = direcciones[respuesta];
@@ -176,7 +174,7 @@ namespace LAB10
                         numeroP = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Ingrese el numero de banos que desea anadir");
                         numeroB = Convert.ToInt32(Console.ReadLine());
-                        foreach (Person persona in personas) { Console.WriteLine(i + " -  " + persona.Rut); i = i + 1; }
+                        foreach (Person persona in personas) { Console.WriteLine(i + "-  " + persona.Rut); i = i + 1; }
                         Console.WriteLine("Ingrese el numero del nuevo dueño");
                         respuesta = Convert.ToInt32(Console.ReadLine());
                         dir.changeOwner(personas[respuesta]);
@@ -190,12 +188,12 @@ namespace LAB10
                     try
                     {
                         i = 0;
-                        foreach (Car auto in autos) { Console.WriteLine(i + " -  " + auto.License_plate); i = i + 1; }
+                        foreach (Car auto in autos) { Console.WriteLine(i + "-  " + auto.License_plate); i = i + 1; }
                         Console.WriteLine("Ingrese el numero del vehiculo a editar");
                         respuesta = Convert.ToInt32(Console.ReadLine());
                         Car au = autos[respuesta];
                         i = 0;
-                        foreach (Person persona in personas) { Console.WriteLine(i + " -  " + persona.Rut); i = i + 1; }
+                        foreach (Person persona in personas) { Console.WriteLine(i + "-  " + persona.Rut); i = i + 1; }
                         Console.WriteLine("Ingrese el numero del nuevo dueño");
                         respuesta = Convert.ToInt32(Console.ReadLine());
                         au.giveUpOwnershipToThirdParty(personas[respuesta]);
