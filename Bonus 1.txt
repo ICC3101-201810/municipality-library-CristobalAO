@@ -1,0 +1,4 @@
+El error que existe entre las relaciones de las clases, es entre adress 
+y person, ya que en el constructor de person se necesita un address 
+y en el de adress se necesita un person. Esta es una asociacion 
+circular, en la que no puede haber uno sin el otro.
